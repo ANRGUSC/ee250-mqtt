@@ -1,0 +1,14 @@
+# Claude Code config
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Windows artifacts
+nul
+
+# IDE
+.vscode/
+.idea/

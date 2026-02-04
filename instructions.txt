@@ -1,0 +1,32 @@
+MQTT Chat Setup Instructions (Ubuntu)
+=====================================
+
+1. Install GitHub CLI
+   sudo apt update && sudo apt install gh
+
+2. Authenticate with GitHub (follow the prompts)
+   gh auth login
+
+3. Clone the repo (replace with actual repo URL)
+   gh repo clone YOUR_USERNAME/mqtt-test
+
+4. Install the MQTT library
+   sudo apt install python3-paho-mqtt
+
+5. Run the chat
+   cd mqtt-test
+   python3 chat.py
+
+
+Alternative: Using Virtual Environment
+--------------------------------------
+If python3-paho-mqtt isn't available via apt, use a venv instead:
+
+   cd mqtt-test
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install paho-mqtt
+   python3 chat.py
+
+Note: With venv, you must run "source venv/bin/activate" before
+running python3 chat.py each new terminal session.
