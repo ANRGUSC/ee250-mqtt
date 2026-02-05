@@ -8,7 +8,7 @@ MQTT Chat Setup Instructions (Ubuntu)
    gh auth login
 
 3. Clone the repo
-   gh repo clone ANRGUSC/ee250-mqtt
+   gh repo clone https://github.com/ANRGUSC/ee250-mqtt
 
 4. Install the MQTT library
    sudo apt install python3-paho-mqtt
