@@ -7,6 +7,7 @@ MQTT Chat - A simple pub/sub chat application
 """
 
 import paho.mqtt.client as mqtt
+from paho.mqtt.enums import CallbackAPIVersion
 import threading
 import random
 
@@ -44,7 +45,7 @@ def on_message(client, userdata, msg):
 
 
 # Setup: create client, attach callbacks, connect
-client = mqtt.Client()
+client = mqtt.Client(CallbackAPIVersion.VERSION1)
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect(BROKER, 1883)
